@@ -222,6 +222,7 @@ static void render_luna_status(void) {
 	prev_wpm = get_current_wpm();
 #endif
 
+#ifdef OLED_ENABLE
 	void animate_luna(void) {
 		render_logo();
 		oled_set_cursor(0,8);
@@ -244,6 +245,8 @@ static void render_luna_status(void) {
 		anim_timer = timer_read();
 		animate_luna();
 	}
+#endif
+
 }
 
 
